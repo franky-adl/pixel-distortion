@@ -52,7 +52,7 @@ let renderer = createRenderer({ antialias: true }, (_renderer) => {
 
 // Create the camera
 var frustumSize = 1;
-camera = new THREE.OrthographicCamera(frustumSize / -2, frustumSize / 2, frustumSize / 2, frustumSize / -2, -1000, 1000);
+let camera = new THREE.OrthographicCamera(frustumSize / -2, frustumSize / 2, frustumSize / 2, frustumSize / -2, -1000, 1000);
 camera.position.set(0, 0, 2);
 
 /**************************************************
@@ -74,7 +74,6 @@ let app = {
 
     this.mouse.prevX = this.mouse.x
     this.mouse.prevY = this.mouse.y
-    console.log(this.mouse)
   },
   // This updates the uv_factor such that the fragment shader can show the image
   // in a css “background-size: cover” fashion
